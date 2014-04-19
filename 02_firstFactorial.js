@@ -1,12 +1,9 @@
-function FirstFactorial(num) { 
-	 // code goes here  
+function FirstFactorial(num) {  
   if (num===0) {
-    return 1;
+    return 1;	// Sets 'Base Case' to end recursion loop
   } else {
-  return num * FirstFactorial(num-1); 
+  return num * FirstFactorial(num-1); // Recursion used rather than 'For' loop
   }
 }
    
-// keep this function call here 
-// to see how to enter arguments in JavaScript scroll down
 FirstFactorial(readline());   

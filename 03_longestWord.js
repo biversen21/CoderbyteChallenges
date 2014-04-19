@@ -1,13 +1,9 @@
 function LongestWord(sen) { 
   var senArray = sen.split(" ")
-      .sort(function(a,b) {
-        return b.replace(/[^a-zA-Z]/g, "").length - a.replace(/[^a-zA-Z]/g, "").length;
+      .sort(function(a,b) {  // Sets custom sort function to sort by decending length
+        return b.replace(/[^a-zA-Z]/g, "").length - a.replace(/[^a-zA-Z]/g, "").length; // Strips non-letters using regexp
       });
-  // code goes here  
-  return senArray[0]; 
-         
+  return senArray[0];       // Returns first (largest) item in array
 }
    
-// keep this function call here 
-// to see how to enter arguments in JavaScript scroll down
 LongestWord(readline());     

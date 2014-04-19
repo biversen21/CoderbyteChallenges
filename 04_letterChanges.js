@@ -2,26 +2,22 @@ function LetterChanges(str) {
   var splitUp = str.split("");
   var alpha = "abcdefghijklmnopqrstuvwxyz";
   var vowels = "aeiou";
-  var stringer = "";
+  var answer = "";
+  
   for (i=0; i<splitUp.length; i++) {
     if (splitUp[i].toLowerCase() == "z") {
-      stringer += "A";
-    } else if (alpha.indexOf(splitUp[i]) != -1) {
-      if (vowels.indexOf(alpha[alpha.indexOf(splitUp[i]) + 1]) != -1) {
-        stringer += alpha[alpha.indexOf(splitUp[i]) + 1].toUpperCase();
-      } else {
-        stringer += alpha[alpha.indexOf(splitUp[i]) +1];
-      }
-    }
-    else {
-      stringer += splitUp[i];
+      answer += "A";
+    } else if (alpha.indexOf(splitUp[i]) != -1) {	// Checks all chars and verifies if they are letters
+      	if (vowels.indexOf(alpha[alpha.indexOf(splitUp[i]) + 1]) != -1) {		// Checks following letter in alphabet to see if vowel
+        	answer += alpha[alpha.indexOf(splitUp[i]) + 1].toUpperCase();		// If vowel, capitalizes it and adds to new string
+      	} else {
+        	answer += alpha[alpha.indexOf(splitUp[i]) +1];	// If not a vowel, adds following letter to string
+      	}
+    } else {
+      answer += splitUp[i];	// If not a letter, adds char as is
     }
   }
-  // code goes here  
-  return stringer; 
-         
+  return answer; 
 }
-   
-// keep this function call here 
-// to see how to enter arguments in JavaScript scroll down
+
 LetterChanges(readline());   
