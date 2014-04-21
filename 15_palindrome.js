@@ -1,15 +1,12 @@
 function Palindrome(str) { 
-  var splitUp = str.split(" ").join("");
+  var splitUp = str.split(" ").join("");	// Strip spaces and rejoin as single "word"
+  
   for (i=0; i<splitUp.length; i++) {
-    if ((splitUp[i]) != (splitUp[splitUp.length - (i+1)])) {
+    if ((splitUp[i]) != (splitUp[splitUp.length - (i+1)])) {	// Check first and last chars, then 2nd...
         return false;
     }
   }
-  // code goes here  
-  return true; 
-         
+  return true;          
 }
-   
-// keep this function call here 
-// to see how to enter arguments in JavaScript scroll down
+
 Palindrome(readline());   
