@@ -3,16 +3,12 @@ function DashInsert(num) {
   var result = []
   for (i=0; i<splitUp.length; i++) {
     result.push(splitUp[i]);
-    if ((splitUp[i] % 2 !== 0) && (splitUp[i+1] % 2 ===1)) {
+    if ((splitUp[i] % 2 !== 0) && (splitUp[i+1] % 2 ===1)) {	// If first number is even and next is odd, push - to result after first number
       result.push("-");
     }
   }
   result = result.join("");
-  // code goes here  
-  return result; 
-         
+  return result;      
 }
    
-// keep this function call here 
-// to see how to enter arguments in JavaScript scroll down
 DashInsert(readline());  
