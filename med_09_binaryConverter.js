@@ -1,17 +1,13 @@
 function BinaryConverter(str) { 
   var total = 0;
-  var place = 1;
+  var place = 1;	// Var to track which "place" in binary table loop is at
   for (i=str.length-1; i>=0; i--) {
-    if (str.charAt(i) == 1) {
+    if (str.charAt(i) === 1) {
       total += place;
     }
-    place *=2;
+    place *=2;	// Next binary "place" will be double last
   }
-  // code goes here  
-  return total; 
-         
+  return total;       
 }
    
-// keep this function call here 
-// to see how to enter arguments in JavaScript scroll down
 BinaryConverter(readline());           
